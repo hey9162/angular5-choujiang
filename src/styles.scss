@@ -1,0 +1,61 @@
+// 第三方
+
+// Normalize
+@import './assets/scss/normalize.scss';
+@import './assets/scss/reset.scss';
+
+// Modules
+@import './assets/scss/common.scss';
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 0.5;
+}
+.swiper-slide{
+  img{
+    height: 100%;
+  }
+}
+.weui-dialog__bd{
+  padding-bottom: 0;
+  text-align: center;
+  img{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.weui-dialog__error{
+  padding: 0.55rem 0;
+}
+.weui-media-box_appmsg{
+  align-items: end;
+}
+.not-data{
+  text-align: center;
+  margin-top: 0.6rem;
+}
+.weui-dialog__title{
+  font-size: 0.75rem;
+}
+.weui-input{
+  font-size: 0.75rem;
+}
+.weui-dialog__bd{
+  p{
+    margin-top: 0.5rem;
+  }
+}
+.weui-cells{
+  margin-top: 0;
+}
+.weui-dialog__ft{
+  font-size: 0.85rem;
+}
+.weui-dialog__hd{
+  padding: 0.75em 1.6em .5em;
+}
+.weui-dialog__error{
+  font-size: 14px;
+  color: rgb(244,53,48) !important;
+}

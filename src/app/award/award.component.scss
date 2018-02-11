@@ -1,0 +1,120 @@
+%horizontal-margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main{
+  background-color: rgb(0, 0, 0);
+  background-image: url('../../assets/images/footbj.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  .top-img{
+    display: block;
+    width: 80%;
+    @extend %horizontal-margin-auto;
+  }
+}
+.circle-content{
+  position: relative;
+  text-align: center;
+  height: 13.75rem;
+  .flag{
+    position: absolute;
+    left: calc(50% - 1.5rem);
+    width: 3rem;
+    z-index: 9;
+  }
+}
+.circle{
+  position: absolute;
+  top: 0.5rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  left: calc(50% - 6.25rem);
+  border-radius: 50%;
+}
+.box{
+  width: 75%;
+  @extend %horizontal-margin-auto;
+  margin-bottom: .9rem;
+  position: relative;
+  overflow: hidden;
+  height: 1.86rem;
+  text-align: center;
+  font-size:  .65rem;
+  line-height: 1.85rem;
+  border: 1px solid #ccc;
+}
+.roll{
+  color: #fff;
+  width: 100%;
+  .inner{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+}
+.form-ctrl{
+  width: 90%;
+  @extend %horizontal-margin-auto;
+}
+.inp-ctrl{
+  padding: 0 0.25rem;
+  margin-bottom: .85rem;
+  label{
+    font-size: .6rem;
+    display: block;
+    color: #fff;
+  }
+  input{
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 75%;
+    @extend %horizontal-margin-auto;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.25rem;
+    font-size: .625rem;
+  }
+  .get-code{
+    position: relative;
+    width: 75%;
+    @extend %horizontal-margin-auto;
+    input{
+      width: 100%;
+      font-size: 12px;
+    }
+    button{
+      position: absolute;
+      right: 0.25rem;
+      top: 0.25rem;
+      padding: 0.285rem 0.15rem;
+      font-size: 12px;
+      border-radius: 0.15rem;
+      background-color: #ccc;
+      border: none;
+    }
+  }
+}
+.btn-content{
+  margin: 1rem;
+  text-align: center;
+  button{
+    background: transparent;
+    padding: 0.25rem 1.5rem;
+    font-size: 0.85rem;
+    border: 1px solid #ccc;
+    color: #fff;
+    border-radius: 0.15rem;
+  }
+}
+.footer{
+  margin-top: 1.6rem;
+  padding-bottom: .6rem;
+  text-align: center;
+  img{
+    width: 90%;
+  }
+}

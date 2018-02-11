@@ -1,0 +1,67 @@
+<img class="image-izimeli list_top-img" src="./assets/images/list_top.png" alt="">
+
+<!-- 每期中奖名单列表 -->
+<div *ngFor="let frame of panelFrameData" [style.padding-top]="frame.winDto.length <= 1 && '.7rem'" class="panel-wall-frame">
+    <!-- 期号 title -->
+    <h1 class="panel-wall-hd silkworm">
+        第{{ frame?.issue }}期（期号：{{ frame?.createTime | slice:0:10 }}）
+    </h1>
+    <div class="weui-flex panel_th">
+        <div class="weui-flex__item">昵称</div>
+        <div class="weui-flex__item">手机号</div>
+        <div class="weui-flex__item">中奖时间</div>
+        <div class="weui-flex__item">中奖奖品</div>
+    </div>
+
+    <div class="panel-wall-bd">
+        <ng-template #nullDto>
+            <p style="text-align: center;padding-top: .6rem">暂无数据</p>
+        </ng-template>
+
+        <div #tables class="panel_tables">
+            <ng-container *ngIf="frame.winDto.length > 0; else nullDto;">
+                <div *ngFor="let dto of frame.winDto" class="weui-flex">
+                    <div class="weui-flex__item">{{ dto.name }}</div>
+                    <div class="weui-flex__item">{{ dto.phone }}</div>
+                    <div class="weui-flex__item">
+                        <p>{{ dto.createTime | slice:0:10 }}</p>
+                        <p class="p-time">{{ dto.createTime | slice:-8 }}</p>
+                    </div>
+                    <div class="weui-flex__item">{{ dto.awardName }}一盒</div>
+                </div>
+
+                <!-- 为了无限滚动 -->
+                <ng-container *ngIf="frame.winDto.length > 1">
+                    <div *ngFor="let dto of frame.winDto" class="weui-flex">
+                        <div class="weui-flex__item">{{ dto.name }}</div>
+                        <div class="weui-flex__item">{{ dto.phone }}</div>
+                        <div class="weui-flex__item">
+                            <p>{{ dto.createTime | slice:0:10 }}</p>
+                            <p class="p-time">{{ dto.createTime | slice:-8 }}</p>
+                        </div>
+                        <div class="weui-flex__item">{{ dto.awardName }}一盒</div>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<!-- 暂时没有信息 -->
+<div *ngIf="notData" class="weui-mask weui-mask__visible">
+    <div class="weui-mask__content weui-mask__vertical">
+        <div class="moment">
+            <p class="moment-title">暂时没有信息~</p>
+            <p class="moment-subtitle">耐心等待 么么哒</p>
+            <div class="foot">
+                <p>我就是我，颜色不一样的烟火！加油！！</p>
+                <a (click)="goBack()" class="btn-back" href="javascript:;">我知道了</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a *ngIf="isdraw === 12000" class="router_btn" routerLink="redeem">我要兑换</a>
+<a *ngIf="isdraw === 14000" class="router_btn" routerLink="express">我的物流</a>
+
+<p *ngIf="panelFrameData" class="note-tip">注：产品将在2018年2月1日以后统一寄出</p>

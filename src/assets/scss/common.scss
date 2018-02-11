@@ -1,0 +1,53 @@
+[hidden], .hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+[disabled], .disabled {
+  cursor: not-allowed;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// ================= 减轻茶 ========================
+.silkworm {
+  color: #0a0101;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  text-shadow: 1px 1px 4px rgba($color: #ff6161, $alpha: .75);
+}
+
+.weui-btn.silkworm {
+  font-size: .75rem;
+  font-weight: bolder;
+  background-image: url(./assets/images/submit.png);
+  background-size: cover;
+  &:after {
+    border: none;
+  }
+}
+
+.image-izimeli {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 9rem;
+  padding-bottom: 1rem;
+}
+
+.simulate-page {
+  overflow-y: auto;
+  background: url(./assets/images/bg.png) 50% 50% no-repeat;
+  background-size: 100% 100%;
+  -webkit-overflow-scrolling: touch;
+}

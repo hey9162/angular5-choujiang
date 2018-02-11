@@ -1,0 +1,55 @@
+.get-prize-tip {
+  padding-bottom: .15rem;
+  font-size: .75rem;
+  text-align: center;
+}
+
+.get-prize {
+  width: 100%;
+  color: #7a7270;
+  padding-bottom: 2.175rem;
+  font-size: .75rem;
+
+  form {
+    margin-left: 2rem;
+    margin-right: 1.95rem;
+    overflow: hidden;
+  }
+
+  .iconfont {
+    color: #90be41;
+    font-size: .75rem;
+    margin-right: .3rem;
+  }
+
+  .silkworm {
+    width: 7rem;
+  }
+
+  .prize-form-group {
+    margin-top: .65rem;
+    line-height: 1.5rem;
+    align-items: center;
+  }
+
+  .item-izimeli {
+    width: 3.7rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prize-input-control {
+    display: block;
+    padding-left: .25rem;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  textarea.address {
+    margin-bottom: .25rem;
+    vertical-align: bottom;
+    overflow-y: hidden;
+    resize: none;
+    white-space: nowrap;
+  }
+}

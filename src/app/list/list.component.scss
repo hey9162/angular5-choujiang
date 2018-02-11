@@ -1,0 +1,153 @@
+.panel-wall-frame {
+  position: relative;
+  margin: .8rem 1rem;
+  padding: 1rem;
+  padding-left: 1.35rem !important;
+  color: #000;
+  font-size: .55rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/panel_frame.png);
+  background-size: 100% 100%;
+
+  .panel-wall-hd {
+    margin-top: .2rem;
+    font-size: .55rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    background-image: url(../../assets/images/panel_title.png);
+    background-size: contain;
+  }
+
+  .panel-wall-bd {
+    padding-bottom: .5rem;
+    max-height: 5.15rem;
+    min-height: 1.6rem;
+    overflow: hidden;
+    .weui-flex {
+      padding: .3rem .5rem 0;
+      height: 1.6rem;
+    }
+  }
+
+  .panel_tables {
+    width: 100%;
+  }
+  
+  .panel-wall-bd,
+  .panel_th {
+    background-color: #fff;
+  }
+
+  .weui-flex__item {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .panel_th {
+    padding: 0 .5rem;
+    position: relative;
+    height: 1.75rem;
+    color: #2a2822;
+    align-items: center;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 94%;
+      height: 2px;
+      background: url(../../assets/images/panle_streak.png) 50% 50% no-repeat;
+      background-size: 95%;
+    }
+  }
+
+  .p-time {
+    color: #747070;
+    font-size: .5rem;
+  }
+}
+
+.note-tip {
+  padding-top: .35rem;
+  padding-bottom: 1.65rem;
+  color: #000;
+  font-size: .65rem;
+  text-align: center;
+}
+
+.list_top-img {
+  padding-top: 2.5rem;
+  width: 100%;
+  height: 16.925rem;
+}
+
+.router_btn {
+  display: block;
+  margin: 0 auto;
+  padding-left: 2.2rem;
+  width: 6.3rem;
+  height: 2.6rem;
+  color: #fff;
+  line-height: 2.6rem;
+  background: url(../../assets/images/link_router.png) center -.2rem no-repeat;
+  background-size: cover;
+}
+
+
+.weui-mask.weui-mask__visible {
+  background: rgba(0,0,0,.8);
+}
+.weui-mask__content.weui-mask__vertical {
+  position: fixed;
+  z-index: 1001;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moment {
+  position: relative;
+  padding: .8rem;
+  width: 12.875rem;
+  height: 13.375rem;
+  color: #000;
+  line-height: 1;
+  text-align: center;
+  background: url(../../assets/images/moment.png) center center no-repeat;
+  background-size: cover;
+
+  &-title {
+    font-size: 1.15rem;
+  }
+  &-subtitle {
+    margin-top: .6rem;
+    font-size: .9rem;
+  }
+
+  .foot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    p {
+      margin: 0 auto;
+      width: 60%;
+      font-size: .75rem;
+    }
+    .btn-back {
+      display: block;
+      margin: .5rem auto .7rem;
+      width: 4.825rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      font-size: .7rem;
+      background: url(../../assets/images/moment_btn.png) center center no-repeat;
+      background-size: cover;
+    }
+  }
+}

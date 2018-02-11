@@ -1,0 +1,35 @@
+<weui-infiniteloader (loadmore)="onLoadMore()" #comp>
+  <div>
+    <div class="info">
+      <ng-container *ngIf="bannerArray | async;let banners;">
+        <app-swiper>
+          <div class="swiper-slide" *ngFor="let banner of banners.data">
+            <img [src]="banner.img+'?x-oss-process=image/resize,m_fixed,w_750,h_375,limit_0'" alt="" (click)="link(banner.link,banner.id,'/banner/update/count')">
+          </div>
+          <p *ngIf="banners.data?.length === 0" [attr.class]="'not-data'">暂无数据</p>
+        </app-swiper>
+      </ng-container>
+      <ng-container *ngIf="dataList;">
+          <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__bd">
+              <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg"
+               *ngFor="let list of dataList" (click)="link(list.link,list.id,'/article/update/count')">
+                <div class="weui-media-box__hd">
+                  <img class="weui-media-box__thumb" [src] = "list.cover+'?x-oss-process=image/resize,m_fixed,w_150,h_150,limit_0'"
+                    alt="">
+                </div>
+                <div class="weui-media-box__bd">
+                  <h4 class="weui-media-box__title">{{list.title}}</h4>
+                  <p class="weui-media-box__desc">{{list.intro}}</p>
+                  <p class="time">{{list.createTime | date:'yyyy-MM-dd'}}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      </ng-container>
+      <ng-template #nullData>
+        <p [attr.class]="'not-data'">暂无数据</p>
+      </ng-template>
+    </div>
+  </div>
+</weui-infiniteloader>

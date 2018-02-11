@@ -1,0 +1,44 @@
+// express
+.express-card {
+  position: relative;
+  margin-top: 8.5rem;
+  .express-card-hd {
+    margin-bottom: 1rem;
+    color: #4b7132;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .card-bd-bg {
+    position: absolute;
+    left: .5rem;
+    bottom: 0;
+    width: 30%;
+    height: 76%;
+    z-index: -1;
+    background-position: left 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .weui-flex {
+    margin-bottom: .3rem;
+    padding-left: 2.95rem;
+    padding-right: 5px;
+    color: #a5a3a2;
+    .item-left {
+      display: flex;
+      justify-content: space-between;
+      flex: 0 1 4rem;
+    }
+    .address {
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

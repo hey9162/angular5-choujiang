@@ -1,0 +1,38 @@
+.swiper-slide {
+  width: 100%;
+  height: 9.4rem;
+  text-align: center;
+  background: #fff;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.time{
+  margin-top: 0.25rem;
+  float: right;
+  color: #999999;
+  font-size: 0.65rem;
+}
+.weui-media-box{
+  padding: .4rem 0.4rem 0 .4rem;
+}
+.weui-media-box__bd{
+  padding-top: .25rem;
+  padding-bottom: 0.15rem;
+}
+.weui-media-box_appmsg .weui-media-box__hd{
+  margin-right: .5rem;
+}
+.weui-media-box_appmsg .weui-media-box__thumb{
+  height: 100%;
+}
+.weui-media-box__desc{
+  margin-top: 0.15rem;
+  font-size: .7rem;
+  height: 1.6rem;
+}
+.weui-media-box__hd{
+  height: 3.75rem;
+  width: 3.75rem;
+}

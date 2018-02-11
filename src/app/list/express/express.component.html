@@ -1,0 +1,11 @@
+<div *ngIf="express" class="express-card">
+    <h1 class="express-card-hd">物流信息</h1>
+    <p class="card-bd-bg" style="background-image: url(./assets/images/express_card_bd.png)"></p>
+
+    <div *ngFor="let exp of express; let i = index" class="weui-flex">
+        <div class="item-left">
+            <span *ngFor="let item of exp.itemLeft">{{ item }}</span>
+        </div>
+        <div class="weui-flex__item" [class.address]="i === 2">{{ exp.info }}</div>
+    </div>
+</div>

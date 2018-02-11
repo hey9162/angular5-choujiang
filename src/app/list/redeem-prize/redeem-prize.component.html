@@ -1,0 +1,42 @@
+<img [style.padding-bottom.rem]="1.75" class="image-izimeli" src="./assets/images/prize.png" alt="">
+<img [style.height.rem]="14" class="image-izimeli" src="./assets/images/dialogue.png" alt="">
+<!-- 表单 -->
+<div class="get-prize">
+    <p class="get-prize-tip">为了防止您的包裹走失，请仔细填写收件地址哦！</p>
+
+    <form #fm="ngForm" novalidate>
+        <div *ngFor="let group of formGroup; let i = index" class="weui-flex prize-form-group">
+            <i class="iconfont {{group.icon}}"></i>
+            <div class="item-izimeli">
+                <span *ngFor="let izi of group.izimeli">{{ izi }}</span>
+            </div>
+            <label class="weui-flex__item prize-input-control">
+                <!-- User Name --- User Phone -->
+                <input *ngIf="(i === 0 || i === 1)" class="weui-input"
+                    [name]="group.name" [type]="group.type"
+                    [(ngModel)]="group.ngmodel"
+                    [pattern]="group.pattern"
+                    [required]="group.required"
+                    [maxlength]="group.maxlength"
+                    [minlength]="group.minlength">
+
+                <!-- User Address -->
+                <textarea *ngIf="i === 2" class="address weui-input"
+                    [name]="group.name"
+                    (input)="forbidEmoji($event)"
+                    [(ngModel)]="group.ngmodel"
+                    [pattern]="group.pattern"
+                    [required]="group.required"
+                    [maxlength]="group.maxlength"
+                    [minlength]="group.minlength"></textarea>
+
+            </label>
+        </div>
+
+        <!-- Submit Button -->
+        <p [style.margin-top.rem]="'0.9'">
+            <button (click)="modifyUserInfo(fm)" class="weui-btn silkworm" type="button">提交</button>
+        </p>
+    </form>
+
+</div>

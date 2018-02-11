@@ -1,0 +1,17 @@
+.error{
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../assets/images/404.png');
+  background-size: 100% 100%;
+  .btn-content{
+    position: absolute;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    img{
+      position: absolute;
+      right: 2rem;
+      width: 5rem;
+    }
+  }
+}
